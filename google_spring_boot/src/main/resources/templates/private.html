@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Private Page</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+
+<h2>User Info:</h2>
+<ul>
+    <li><b>First Name:</b> <span th:text="${userAttributes['given_name']}"></span></li>
+    <li><b>Last Name:</b> <span th:text="${userAttributes['family_name']}"></span></li>
+    <li><b>Email:</b> <span th:text="${userAttributes['email']}"></span></li>
+</ul>
+
+<br>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+
+<br>
+<a href="/">⬅ Back to Home</a>
+</body>
+</html>
