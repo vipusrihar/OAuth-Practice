@@ -87,7 +87,7 @@ How to Run
 1. Clone the repository
 
 ```bash
-git clone https://github.com/https://github.com/vipusrihar/oAuth-Practice.git
+git clone https://github.com/https://github.com/vipusrihar/OAuth-Practice.git
 cd oAuthPractice/google_spring_boot
 ```
 2. Add your Google OAuth2 credentials in application.properties

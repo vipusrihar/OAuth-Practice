@@ -9,7 +9,7 @@ This project demonstrates how to integrate **OAuth 2.0** authentication using **
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/vipusrihar/oAuth-Practice.git
+git clone https://github.com/vipusrihar/OAuth-Practice.git
 cd oAuth-Practice
 ````
 
@@ -31,7 +31,39 @@ cd oAuth-Practice
 
 ---
 
-### 3. Configure Application Properties
+### 3. Add Dependencies
+
+```xml
+<dependencies>
+    <!-- Spring Boot Starter Web -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Starter Security -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- OAuth2 Client (for Google login) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-oauth2-client</artifactId>
+    </dependency>
+
+    <!-- Thymeleaf Templates -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+</dependencies>
+
+```
+---
+
+### 4. Configure Application Properties
 
 Update the `src/main/resources/application.properties` file:
 
@@ -62,7 +94,7 @@ spring.security.oauth2.client.provider.asgardeo.issuer-uri=https://api.asgardeo.
 
 ---
 
-### 4. Run the Application
+### 5. Run the Application
 
 Using Maven:
 
@@ -80,7 +112,7 @@ Default URL: [http://localhost:8080](http://localhost:8080)
 
 ---
 
-### 5. Login with Asgardeo
+### 6. Login with Asgardeo
 
 1. Open the app in your browser.
 2. Click **Login with Asgardeo**.
